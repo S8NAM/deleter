@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>걱정 제거 완료!</title>
+<style>
+.box{width:800px;
+	margin:0 auto;
+	text-align: center;
+}
+  #box{width:800px;
+	height:30px;
+	border:1px solid black;} 
+ #gauge{width:0%;
+	height:100%;
+	background-color:yellow;  }
+</style>
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+//	$('#btn').click(function(){
+		$('#gauge').animate({width:'50%'},15000);
+		$('#gauge').animate({width:'90%'},10000);
+		$('#gauge').animate({width:'98%'},5000);
+		$('#gauge').animate({width:'100%'},3000);
+//	});
+});
+</SCRIPT>
+</head>
+<body>
+<div id="box">
+<div id="gauge"></div>
+<br>
+<input type="button" id="btn" value="시작하기"/>
+</div>
+</body>
+</html>
