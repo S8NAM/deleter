@@ -3,22 +3,12 @@
 <head>
 <meta charset="EUC-KR">
 <title>걱정 제거기</title>
-<style>
-.box{width:800px;
-	margin:0 auto;
-	text-align: center;
-}
- #loading{width:800px;
-	height:30px;
-	border:1px solid black;} 
- #gauge{width:0%;
-	height:100%;
-	background-color:yellow;  }
-</style>
+<link rel="stylesheet" type="text/css" href="../css/mainstyle.css" />
+
 <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-//로딩바 숨김
+/* //로딩바 숨김
 var flag="true";
 $('#loading').hide();
 //로딩바 애니
@@ -28,9 +18,12 @@ $('#loading').hide();
 		$('#gauge').animate({width:'85%'},15000);
 		$('#gauge').animate({width:'98%'},5000);
 		$('#gauge').animate({width:'100%'},3000);
-	});	
-//result1 페이지 이동
-
+	});	 */
+$('input[id=btn1]').hover(function(event){
+	$(this).css('background','yellow');
+},function(event){
+	$(this).css('background','');
+});
 });
 </SCRIPT>
 </head>
@@ -42,14 +35,14 @@ $('#loading').hide();
 	<strong>제거 시작하기</strong> 버튼을 누르시면 제거가 시작됩니다.
 	</p>
 	<br>
-	<input type="button" value="제거 시작하기" id="btn1">
+	<input type="button" value="제거 시작하기" id="btn1" onclick="location.href='wresult1.html'">
 	<input type="button" value="제거하지 않기" onclick="location.href='wresult2.html'">
-	<br>
+<!-- 	<br>
 	<br>
 
 <div id="loading">
 	<div id="gauge"></div>
 	당신의 걱정을 제거하는 중입니다... 천천히 큰 심호흡을 하며 기다려주세요.
-</div>
+</div> -->
 </body>
 </html>

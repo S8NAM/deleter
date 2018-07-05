@@ -2,37 +2,36 @@
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>걱정 제거 완료!</title>
-<style>
-.box{width:800px;
-	margin:0 auto;
-	text-align: center;
-}
-  #box{width:800px;
-	height:30px;
-	border:1px solid black;} 
- #gauge{width:0%;
-	height:100%;
-	background-color:yellow;  }
-</style>
+<title>걱정 제거 작업</title>
+<link rel="stylesheet" type="text/css" href="../css/mainstyle.css" />
 <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
-$(document).ready(function(){
 
-//	$('#btn').click(function(){
-		$('#gauge').animate({width:'50%'},15000);
-		$('#gauge').animate({width:'90%'},10000);
+$(document).ready(function(){
+		$('#gauge').animate({width:'90%'},20000);
 		$('#gauge').animate({width:'98%'},5000);
 		$('#gauge').animate({width:'100%'},3000);
-//	});
-});
+
+/* if($('#gauge').width()=800){	
+alert("제거가 완료되었습니다!");
+}*/
+}); 
+var end=function(){
+	alert("제거가 완료되었습니다!\n아직 걱정이 남아 있다면,\n당신이 스스로 제거할 수 있을 만큼만 남아 있기 때문입니다.");
+}
+setTimeout(end,29000);
+
 </SCRIPT>
 </head>
 <body>
-<div id="box">
-<div id="gauge"></div>
-<br>
-<input type="button" id="btn" value="시작하기"/>
+<div class="box">
+	<div id="loading">
+		<div id="gauge"></div>
+		<br>
+		<br>
+		당신의 걱정을 제거하는 중입니다...<br>
+		제거가 끝날 때까지 천천히 큰 심호흡을 하며 기다려주세요.
+	</div>
 </div>
 </body>
 </html>
